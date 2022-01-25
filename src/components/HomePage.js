@@ -6,6 +6,7 @@ import '../App.css'
 import axios from 'axios'
 //import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import ResultsPage from './ResultsPage'
+import Navbar from './Navbar'
 
 export default function HomePage() {
 
@@ -14,6 +15,7 @@ export default function HomePage() {
 
 	return (
 		city ? <ResultsPage city ={city} /> : (<div className='home-page'>
+			
 			<video src={video} autoPlay muted id='video' />
 			<div className='logo-input'>
 				<img src={logo} className='star-wars-logo' alt='logo' />

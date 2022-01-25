@@ -1,0 +1,56 @@
+a {
+    color: #2d7dc9;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: rgb(236, 127, 84);
+  }
+  
+  .nav-banner {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: #1d1a1a;
+    height: 60px;
+    padding: 40px 20px;
+    justify-content: space-between;
+    border-bottom: 4px solid black;
+  }
+  
+  .nav-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  #unisearch {
+    font-size: 40px;
+    font-weight: bold;
+    font-style: oblique;
+    color: rgb(180, 164, 21);
+  }
+  
+  .nav-links {
+    display: flex;
+  }
+  
+  .nav-logo {
+    height: 100px;
+    width: 170px;
+    margin: 0;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .nav-home {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  .nav-campuses {
+    font-size: 25px;
+    font-weight: bold;
+    padding-right: 40px;
+  }
