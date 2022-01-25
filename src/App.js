@@ -7,16 +7,11 @@ import axios from 'axios'
 
 
 function App() {
-
-  const [data, setData] = useState()
   
   return (
-    <Router>
-      <Routes>
-        <Route exact path='/' element={<HomePage setData={setData} />} />
-        <Route exact path='/results' element={<ResultsPage data={data} />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <HomePage />
+    </div>
   );
 }
 

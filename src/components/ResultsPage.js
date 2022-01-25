@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import planet from "../images/hoth.jpeg"
+import Axios from 'axios'
 import '../App.css'
 
-export default function ResultsPage({data}) {
+export default function ResultsPage(props) {
   
-  console.log(data)
+  const [weatherData, setWeatherData] = useState([])
+
+  useEffect(async() => {
+    const fetchData = () => {
+      console.log(props.city)
+    }
+    fetchData()
+  }, [])
 
   return (
       <div className="results-page">
