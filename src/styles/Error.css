@@ -1,0 +1,31 @@
+/* body {
+    background-image: url(alderaan.webp);
+    background-color: #000000;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    /* height: 200px;
+   } */ 
+
+/* .error-page {
+    background-color: black;
+} */
+
+.error-title {
+    font-family: 'Roboto Mono';
+    font-weight: 500;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.error-button {
+    border: none;
+}
+
+/* .error-img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+} */

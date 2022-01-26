@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import "../App.css"
+import '../styles/Planet.css'
 
 export default function (props) {
     const [planet, setPlanet] = useState({
-        name: "",
-        description: "",
-        imageUrl: "",
+        name: '',
+        description: '',
+        imageUrl: '',
     })
     const [id, setId] = useState(1)
 
@@ -42,7 +42,7 @@ export default function (props) {
         <div className='planet-div'>
 
             <div>
-                <img className='planet-image' src={planet.imageUrl} alt="planet" />
+                <img className='planet-image' src={planet.imageUrl} alt='representation of star wars planet' />
             </div>
 
             <div className='top'>

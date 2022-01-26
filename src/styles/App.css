@@ -1,0 +1,163 @@
+* {
+	margin: 0;
+	overflow: hidden;
+
+}
+
+body {
+	/* transform: scale(1.1); */
+	transform-origin: 0 0;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .star-wars-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+#video {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+	width: 100%;
+	object-fit: cover;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.685);
+	filter: opacity(90%);
+	filter: blur(0.2px);
+	filter: saturate(2);
+}
+
+.star-wars-logo {
+	max-width: 30%;
+	max-height: 10%;
+	/* height: 200px;
+	width: 400px; */
+	padding: 0px 0px 0px 0px;
+	pointer-events: none;
+	z-index: 0;
+}
+
+@font-face {
+	font-family: 'Starjedi';
+	src: url('../Starjedi.ttf');
+}
+
+.weather-logo {
+	top: 7%;
+	color: #ffc300;
+	font-size: 300%;
+	font-family: 'Starjedi';
+}
+
+.logo-div {
+	padding-top: 160px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.logo-div>input {
+	margin-top: 0.7%;
+	outline: none;
+	background: transparent;
+	border: none;
+	color: white;
+	font-size: 140%;
+	font-family: 'Roboto Mono', monospace;
+	text-align: center;
+}
+
+.enter-button {
+	margin-top: 1%;
+	outline: none;
+	background: #ffc300;
+	border: none;
+	border-radius: 20px;
+	font-size: larger;
+	font-weight: 700;
+	color: white;
+	box-shadow: 5px 2px #888888;
+}
+
+.logo-div>button:hover {
+	background: #b18800;
+}
+
+::placeholder {
+	color: white;
+	font-weight: bold;
+}
+
+.results-page {
+	justify-content: center;
+	align-items: center;
+}
+
+/* .planet-image {
+	object-fit: cover;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+	max-width: 100%;
+	min-height: 100%;
+}
+
+.planet-div {
+	max-width: 100%;
+	max-height: 100%;
+} */
+
+/* .specific-planet-name {
+	font-family: 'Roboto', monospace;
+	font-size: 50px;
+	font-weight: 900;
+} */
+
+/* .top {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 90%;
+	position: absolute;
+	top: 4%;
+	left: 3%;
+}
+
+.middle {
+	margin: 0 auto;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 140%;
+	top: 35%;
+	bottom: 30%;
+	left: 20%;
+	right: 20%;
+} */
+
+/* .middle-top {
+	margin-right: 20%;
+	left: 10%;
+	right: 20%;
+}
+
+.middle-bottom {
+	margin-left: 20%;
+	left: 20%;
+	right: 20%;
+}
+
+.bottom {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 90%;
+	position: absolute;
+	bottom: 4%;
+	right: 3%;
+} */

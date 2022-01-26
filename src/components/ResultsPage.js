@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import planet from "../images/hoth.jpeg"
-import Planet from "./Planet"
+import planet from '../images/hoth.jpeg'
+import Planet from './Planet'
 import Axios from 'axios'
-import '../App.css'
-import Error from "./Error"
+import '../styles/App.css'
+import Error from './Error'
 
 export default function ResultsPage(props) {
 
@@ -34,7 +34,7 @@ export default function ResultsPage(props) {
   }
 
   return (
-    <div style={{ width: "500px", height: "100%" }}>
+    <div style={{ width: '500px', height: '100%' }}>
       {(error === true) && <Error />}
       {weatherData && <Planet weatherData={weatherData} />}
     </div>
