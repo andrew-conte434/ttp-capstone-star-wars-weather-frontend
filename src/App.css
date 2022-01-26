@@ -9,6 +9,10 @@
   }
 } */
 #video {
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 	position: absolute;
 	justify-content: center;
 	align-items: center;
