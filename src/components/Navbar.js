@@ -1,13 +1,15 @@
 import "../Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../suns-logo.png"
 import HomePage from "./HomePage";
+import { Navigate } from "react-router-dom";
+import { Route, Redirect } from 'react-router'
 
 export default function Navbar() {
+
   return (
     <div className="nav-banner">
       <div className="nav-header">
-        {/* Link component takes a very simple prop to= that tells us where we want to redirect */}
         <img
           src={Logo}
           className="nav-logo"
@@ -16,8 +18,7 @@ export default function Navbar() {
       </div>
 
       <div className="nav-links">
-        <Link to="/home" className="nav-home">Home</Link>
-        <Link to={HomePage} className="nav-campuses">My Cities</Link>
+        <Link to={"/"} className="nav-home">Home</Link>
       </div>
     </div>
   );

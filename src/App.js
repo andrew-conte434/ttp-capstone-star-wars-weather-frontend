@@ -14,11 +14,11 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/Navbar" element={<Navbar />} />
         </Routes>
       </Router>
 
-      {/* <HomePage /> */}
     </div>
   );
 }
