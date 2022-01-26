@@ -1,7 +1,13 @@
 * {
 	margin: 0;
+	overflow: hidden;
+
 }
 
+body {
+	/* transform: scale(1.1); */
+	transform-origin: 0 0;
+}
 
 /* @media (prefers-reduced-motion: no-preference) {
   .star-wars-logo {
@@ -10,9 +16,9 @@
 } */
 #video {
 	background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	position: absolute;
 	justify-content: center;
 	align-items: center;
@@ -23,7 +29,7 @@
 	background: rgba(0, 0, 0, 0.685);
 	filter: opacity(90%);
 	filter: blur(0.2px);
-    filter: saturate(2);
+	filter: saturate(2);
 }
 
 .star-wars-logo {
@@ -53,8 +59,8 @@
 	src: url(Starjedi.ttf);
 }
 
-.logo-input > input {
-    outline: none;
+.logo-input>input {
+	outline: none;
 	background: transparent;
 	border: none;
 	color: white;
@@ -65,17 +71,17 @@
 
 .enter-button {
 	margin-top: 20px;
-	outline:none;
+	outline: none;
 	background: #ffc300;
 	border: none;
 	border-radius: 20px;
 	font-size: larger;
 	font-weight: 700;
-	color:white;
+	color: white;
 	box-shadow: 5px 2px #888888;
 }
 
-.logo-input > button:hover {
+.logo-input>button:hover {
 	background: #b18800;
 }
 
@@ -84,14 +90,25 @@
 	font-weight: bold;
 }
 
-.planet {
+.planet-image {
+	object-fit: cover;
 	position: absolute;
 	justify-content: center;
 	align-items: center;
 	z-index: -1;
-	width: 100%;
-	object-fit: cover;
-	height: 100%;
+	max-width: 100%;
+	min-height: 100%;
+}
+
+.planet-div {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.specific-planet-name {
+	font-family: 'Roboto', monospace;
+	font-size: 50px;
+	font-weight: 900;
 }
 
 .results-page {
@@ -100,15 +117,43 @@
 }
 
 .top {
-	padding-top: 50px;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 90%;
+	position: absolute;
+	top: 4%;
+	left: 3%;
 }
 
 .middle {
-	padding-top: 200px;
-	padding-left: 300px;
+	margin: 0 auto;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 140%;
+	top: 35%;
+	bottom: 30%;
+	left: 20%;
+	right: 20%;
+}
+
+.middle-top {
+	margin-right: 20%;
+	left: 10%;
+	right: 20%;
+}
+
+.middle-bottom {
+	margin-left: 20%;
+	left: 20%;
+	right: 20%;
 }
 
 .bottom {
-	padding-left: 600px;
-	padding-top: 250px;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 90%;
+	position: absolute;
+	bottom: 4%;
+	right: 3%;
 }

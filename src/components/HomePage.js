@@ -14,17 +14,17 @@ export default function HomePage() {
 	const [inputValue, setInputValue] = useState("")
 
 	return (
-		city ? <ResultsPage city ={city} /> : (<div className='home-page'>
-			
+		city ? <ResultsPage city={city} /> : (<div className='home-page'>
+
 			<video src={video} autoPlay muted id='video' />
 			<div className='logo-input'>
 				<img src={logo} className='star-wars-logo' alt='logo' />
 				<h2 className='weather-logo'>Weather App</h2>
-				<input placeholder='ENTER CITY HERE...' 
-					   onChange={(e) => setInputValue(e.target.value)}></input>
-				<button className='enter-button' 
-						onClick={() => {setCity(inputValue)}}>
-							ENTER CITY
+				<input placeholder='ENTER CITY HERE...'
+					onChange={(e) => setInputValue(e.target.value)}></input>
+				<button className='enter-button'
+					onClick={() => { setCity(inputValue) }}>
+					ENTER CITY
 				</button>
 			</div>
 		</div>)

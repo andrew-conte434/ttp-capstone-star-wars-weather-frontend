@@ -24,6 +24,7 @@ export default function ResultsPage(props) {
         setError(true)
       } else {
         const obj = await res.json()
+        console.log(obj)
         setError(false)
         setWeatherData(obj)
       }
@@ -33,8 +34,8 @@ export default function ResultsPage(props) {
   }
 
   return (
-    <div>
-      {error && <Error />}
+    <div style={{ width: "500px", height: "100%" }}>
+      {(error === true) && <Error />}
       {weatherData && <Planet weatherData={weatherData} />}
     </div>
   )

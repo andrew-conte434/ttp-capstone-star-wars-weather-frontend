@@ -5,10 +5,9 @@ export default function Error() {
 
         <div className="error-page">
             <div>
-            <h1 className="error-title">Oops. Couldn't find data on that city.</h1>
-            </div> 
+                <h1 className="error-title">Oops. Couldn't find data on that city.</h1>
+            </div>
         </div>
-
 
     )
 }
