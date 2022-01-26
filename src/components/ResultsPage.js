@@ -11,7 +11,6 @@ export default function ResultsPage(props) {
 
   useEffect(async () => {
     await fetchData()
-    console.log(weatherData)
   }, [])
 
   const fetchData = async () => {
