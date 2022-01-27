@@ -6,9 +6,11 @@
     /* height: 200px;
    } */ 
 
-/* .error-page {
+
+.error-page {
     background-color: black;
-} */
+    height: 100%; width: 100%;
+}
 
 .error-title {
     font-family: 'Roboto Mono';

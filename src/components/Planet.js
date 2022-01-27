@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/Planet.css'
 
-export default function (props) {
+export default function ({weatherData}) {
+    
     const [planet, setPlanet] = useState({
         name: '',
         description: '',
@@ -27,7 +28,7 @@ export default function (props) {
     }
 
     function getPlanetId() {
-        const temp = props.weatherData.main.temp
+        const temp = weatherData.main.temp
         console.log(temp)
         if (temp > 370) { //REALLY HOT!!!
             setId(1)

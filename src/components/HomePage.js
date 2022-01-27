@@ -8,26 +8,18 @@ import axios from 'axios'
 //import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import ResultsPage from './ResultsPage'
 import Navbar from './Navbar'
+import Error from './Error'
 
-export default function HomePage() {
+export default function HomePage({city, setCity}) {
 
-	const [city, setCity] = useState('')
+	
 	const [inputValue, setInputValue] = useState('')
 
 	return (
-		city ? <ResultsPage city={city} /> : (<div className='home-page'>
+		city ? <ResultsPage /> : (<div className='home-page'>
 
 			<video src={video} autoPlay muted id='video' />
 			<audio src={audio} autoPlay></audio>
-
-			{/* <audio src={audio} type='mp3' muted='false' autoPlay /> */}
-			{/* <audio src={audio} autoPlay></audio> */}
-
-			{/* <iframe id='video'
-				src="https://www.youtube.com/embed/MkRSmynqonM?start=50&autoplay=1&mute=1&modestbranding=1&fs=0&autohide=0&controls=0&showinfo=0"
-				title="YouTube video player" frameborder="0"
-				allowfullscreen>
-			</iframe> */}
 
 			<div className='logo-div'>
 				<img src={logo} className='star-wars-logo' alt='logo' />
