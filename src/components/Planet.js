@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/Planet.css'
+import { Context } from './Context'
+import { useParams,useNavigate } from 'react-router-dom';
 
-export default function Planet ({weatherData}) {
-    
+export default function Planet() {
+    let params = useParams()
+    let navigate = useNavigate()
+
     const [planet, setPlanet] = useState({
         name: '',
         description: '',
@@ -10,11 +14,35 @@ export default function Planet ({weatherData}) {
     })
     const [id, setId] = useState(1)
 
+    const [weatherData, setWeatherData] = useState(null)
+    const [error, setError] = useState(false)
+
+    const apiKey = '2633a1483698ea57695b55437e395ee8' //SHAKHRAM
+
     useEffect(async () => {
         getPlanetId()
         console.log(id)
+        await fetchWeather()
         await fetchPlanet()
-    }, [])
+    }, [params])
+
+    const fetchWeather = async () => {
+        try {
+            console.log(params.city)
+            const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${params.city.toLowerCase()}&appid=${apiKey}`);
+            console.log(res)
+            if (!res.ok) {
+                setError(true)
+            } else {
+                const obj = await res.json()
+                console.log(obj)
+                setError(false)
+                setWeatherData(obj)
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     const fetchPlanet = async () => {
         try {
@@ -39,7 +67,11 @@ export default function Planet ({weatherData}) {
         }
         console.log(id)
     }
+
     return (
+
+        (error === true) ? navigate('/error') :
+
         <div className='planet-div'>
 
             <div>

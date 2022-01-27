@@ -4,6 +4,7 @@ import Logo from '../images/suns-logo.png'
 import HomePage from './HomePage';
 import { Navigate } from 'react-router-dom';
 import { Route, Redirect } from 'react-router'
+import { Context } from './Context'
 
 export default function Navbar() {
 

@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Error from './components/Error';
 import Planet from './components/Planet';
+import ContextProvider from '../src/components/Context'
 
 function App() {
 
@@ -12,12 +13,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Routes>
-          <Route exact path="/" element={<HomePage />} /> 
-          <Route path="/planet" element={<Planet />} />
-          <Route exact path="/error" element={<Error />} />
-          <Route exact path="/resultspage" element={<ResultsPage /> } />
-        </Routes>
+        <ContextProvider>
+          <Routes className='routes'>
+            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/:city" element={<Planet />} />
+            <Route exact path="/error" element={<Error />} />
+          </Routes>
+        </ContextProvider>
       </Router>
     </div>
   );
