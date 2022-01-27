@@ -20,6 +20,8 @@
 }
 
 .top {
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	font-family: 'Roboto Mono', monospace;
 	font-size: 90%;
 	position: absolute;
@@ -28,6 +30,8 @@
 }
 
 .middle {
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	margin: 0 auto;
 	position: absolute;
 	display: flex;
@@ -42,18 +46,24 @@
 }
 
 .middle-top {
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	margin-right: 20%;
 	left: 10%;
 	right: 20%;
 }
 
 .middle-bottom {
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	margin-left: 20%;
 	left: 20%;
 	right: 20%;
 }
 
 .bottom {
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	font-family: 'Roboto Mono', monospace;
 	font-size: 90%;
 	position: absolute;
