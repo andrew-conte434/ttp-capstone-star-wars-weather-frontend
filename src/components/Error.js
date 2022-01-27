@@ -1,16 +1,14 @@
-import "../Error.css"
-import Image from "../death-star.png"
+import '../styles/Error.css'
 
-export default function CityError() {
+export default function Error() {
     return (
 
-        <div className="error-page">
+        <div className='error-page'>
             <div>
-            <h1 className="error-title">Oops. Couldn't find data on that city.</h1>
-            {/* <img src={Image} className="error-img" /> */}
-            </div> 
+                <h1 className='error-title'>Oops. Couldn't find data on that city.</h1>
+                <button className='error-button'>RETURN TO HOME</button>
+            </div>
         </div>
-
 
     )
 }

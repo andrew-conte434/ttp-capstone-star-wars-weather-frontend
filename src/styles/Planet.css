@@ -1,0 +1,62 @@
+.planet-div {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.planet-image {
+	object-fit: cover;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+	max-width: 100%;
+	min-height: 100%;
+}
+
+.specific-planet-name {
+	font-family: 'Roboto', monospace;
+	font-size: 50px;
+	font-weight: 900;
+}
+
+.top {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 90%;
+	position: absolute;
+	top: 4%;
+	left: 3%;
+}
+
+.middle {
+	margin: 0 auto;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 140%;
+	top: 35%;
+	bottom: 30%;
+	left: 20%;
+	right: 20%;
+}
+
+.middle-top {
+	margin-right: 20%;
+	left: 10%;
+	right: 20%;
+}
+
+.middle-bottom {
+	margin-left: 20%;
+	left: 20%;
+	right: 20%;
+}
+
+.bottom {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 90%;
+	position: absolute;
+	bottom: 4%;
+	right: 3%;
+}
