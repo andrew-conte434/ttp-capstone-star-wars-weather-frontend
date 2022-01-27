@@ -1,22 +1,19 @@
 import React, { useState } from 'react'
-import { Navigate } from 'react-router-dom'
 import logo from '../star-wars-logo.wine.svg'
 import video from '../videos/star-wars-video.mp4'
 import audio from '../audio/star-wars-music.mp3'
 import '../styles/App.css'
-import axios from 'axios'
-//import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+
 import ResultsPage from './ResultsPage'
-import Navbar from './Navbar'
-import Error from './Error'
 
-export default function HomePage({city, setCity}) {
 
-	
+export default function HomePage() {
+
+	const [city, setCity] = useState('')
 	const [inputValue, setInputValue] = useState('')
 
 	return (
-		city ? <ResultsPage /> : (<div className='home-page'>
+		city ? <ResultsPage city={city} /> : (<div className='home-page'>
 
 			<video src={video} autoPlay muted id='video' />
 			<audio src={audio} autoPlay></audio>

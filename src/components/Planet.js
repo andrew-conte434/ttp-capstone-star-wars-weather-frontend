@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/Planet.css'
 
-export default function ({weatherData}) {
+export default function Planet ({weatherData}) {
     
     const [planet, setPlanet] = useState({
         name: '',
