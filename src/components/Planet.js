@@ -11,7 +11,7 @@ export default function (props) {
             const res =  await fetch(`https://star-wars-weather-database.herokuapp.com/api/planets/`)
             const obj =  await res.json()
             setPlanets(obj)
-            setId(selectPlanet(props.weatherData.main.temp, props.weatherData.clouds.all,
+            setId(selectPlanet(props.weatherData.main.temp, props.weather.clouds.all,
                 props.weatherData.weather[0].description)  - 1)
         } catch (error) {
             throw error
@@ -22,7 +22,7 @@ export default function (props) {
         planets && <div className='planet-div'>
 
             <div>
-                <img className='planet-image' src={planets[id].imageUrl} alt='representation of star wars planet' />
+                <img className='planet-image' src={planets[id].imageUrl} alt='planet' />
             </div>
 
             <div className='top'>
