@@ -14,8 +14,8 @@ export default function HomePage() {
 	const [city, setCity] = useState('')
 	const [inputValue, setInputValue] = useState('')
 
-	const handleClick = () => {
-		setCity(inputValue)
+	const handleClick = (e) => {
+		e.preventDefault()
 		navigate(`/${city}`)
 	}
 
@@ -23,17 +23,18 @@ export default function HomePage() {
 		<div className='home-page'>
 
 			<video src={video} autoPlay muted id='video' />
-			<audio src={audio} autoPlay></audio>
+			{/* <audio src={audio} autoPlay></audio> */}
 
 			<div className='logo-div'>
 				<img src={logo} className='star-wars-logo' alt='logo' />
 				<h2 className='weather-logo'>Weather App</h2>
-				<input placeholder='ENTER CITY HERE...'
-					onChange={(e) => setInputValue(e.target.value)}></input>
-				<button className='enter-button'
-					onClick={(e) => handleClick()}>
-					ENTER CITY
-				</button>
+				<form onSubmit={(e) => handleClick(e)}>
+					<input placeholder='ENTER CITY HERE...'
+						onChange={(e) => setCity(e.target.value)}></input>
+					<button className='enter-button' type='submit'>
+						ENTER CITY
+					</button>
+				</form>
 			</div>
 
 		</div>

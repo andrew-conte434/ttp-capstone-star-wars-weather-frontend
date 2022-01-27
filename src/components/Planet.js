@@ -9,7 +9,7 @@ export default function (props) {
     let navigate = useNavigate()
 
     const [planets, setPlanets] = useState(null)
-    const [id, setId] = useState(1)
+    let id = 1
 
     const [weatherData, setWeatherData] = useState(null)
     const [error, setError] = useState(false)
@@ -17,45 +17,43 @@ export default function (props) {
     const apiKey = '2633a1483698ea57695b55437e395ee8' //SHAKHRAM
 
     useEffect(() => {
-        fetchWeather()
+        fetchData()
     }, [])
 
-    const fetchWeather = async() => {
+
+    const fetchData = async() => {
         try {
             console.log(params.city)
-            const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${params.city.toLowerCase()}&appid=${apiKey}`);
-            if (!res.ok) {
+            const resWeather = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${params.city.toLowerCase()}&appid=${apiKey}`);
+            const resPlanets = await fetch(`https://star-wars-weather-database.herokuapp.com/api/planets/`)
+            //const obj = await res.json()
+            //setPlanets(obj)
+            console.log(resWeather)
+            if (!resWeather.ok || !resPlanets.ok) {
+                console.log(!resWeather.ok)
                 setError(true)
             } else {
-                const obj = await res.json()
                 setError(false)
-                setWeatherData(obj)
-                console.log(obj)
+                const objWeather = await resWeather.json()
+                const objPlanets = await resPlanets.json()
+                await setWeatherData(objWeather)
+                await setPlanets(objPlanets)
+                console.log(objWeather)
                 console.log(weatherData)
-                fetchPlanets()
+                
             }
         } catch (error) {
             console.log(error)
         }
     }
 
-    const fetchPlanets = async () => {
-        try {
-            const res = await fetch(`https://star-wars-weather-database.herokuapp.com/api/planets/`)
-            const obj = await res.json()
-            setPlanets(obj)
-            console.log(planets)
-            console.log(weatherData)
-            setId(selectPlanet(weatherData.main.temp, weatherData.clouds.all,
-                weatherData.weather[0].description)  - 1)
-            
-        } catch (error) {
-            throw error
-        }
+    (weatherData && (id = (selectPlanet(weatherData.main.temp, weatherData.clouds.all,
+        weatherData.weather[0].description)  - 1)))
+
+    if(error){
+        navigate('/error')
     }
-    
     return (
-        (error === true) ? navigate('/error') : 
         (planets) && 
         <div className='planet-div'>
 
