@@ -1,0 +1,114 @@
+* {
+	margin: 0;
+}
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .star-wars-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+#video {
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+	width: 100%;
+	object-fit: cover;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.685);
+	filter: opacity(90%);
+	filter: blur(0.2px);
+    filter: saturate(2);
+}
+
+.star-wars-logo {
+	height: 200px;
+	width: 400px;
+	padding: 0px 0px 0px 0px;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.logo-input {
+	padding-top: 160px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.weather-logo {
+	color: #ffc300;
+	font-size: xx-large;
+	font-family: 'Starjedi';
+}
+
+@font-face {
+	font-family: 'Starjedi';
+	src: url(Starjedi.ttf);
+}
+
+.logo-input > input {
+    outline: none;
+	background: transparent;
+	border: none;
+	color: white;
+	font-weight: bold;
+	font-size: large;
+	text-align: center;
+}
+
+.enter-button {
+	margin-top: 20px;
+	outline:none;
+	background: #ffc300;
+	border: none;
+	border-radius: 20px;
+	font-size: larger;
+	font-weight: 700;
+	color:white;
+	box-shadow: 5px 2px #888888;
+}
+
+.logo-input > button:hover {
+	background: #b18800;
+}
+
+::placeholder {
+	color: white;
+	font-weight: bold;
+}
+
+.planet-image {
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+	width: 100%;
+	object-fit: cover;
+	height: 100%;
+}
+
+.results-page {
+	justify-content: center;
+	align-items: center;
+}
+
+.top {
+	padding-top: 50px;
+}
+
+.middle {
+	padding-top: 200px;
+	padding-left: 300px;
+}
+
+.bottom {
+	padding-left: 600px;
+	padding-top: 250px;
+}

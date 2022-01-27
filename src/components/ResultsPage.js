@@ -24,7 +24,6 @@ export default function ResultsPage(props) {
         setError(true)
       } else {
         const obj = await res.json()
-        console.log(obj)
         setError(false)
         setWeatherData(obj)
       }
