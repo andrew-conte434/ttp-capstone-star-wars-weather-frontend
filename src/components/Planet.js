@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/Planet.css'
 import { Context } from './Context'
-import { useParams,useNavigate } from 'react-router-dom';
+import { useParams,useNavigate, Link } from 'react-router-dom';
 import selectPlanet from '../modules/planetSelect';
 
 export default function (props) {
@@ -62,9 +62,14 @@ export default function (props) {
             </div>
 
             <div className='top'>
-                <h1>{Math.floor(((weatherData.main.temp - 273.15) 
-                        * 1.8) + 32)} degrees?  
-                        {weatherData.weather[0].description}? </h1>
+                <h1>{Math.floor(((weatherData.main.temp - 273.15)* 1.8) + 32)} degrees? {weatherData.
+                weather[0].description.charAt(0).toUpperCase() 
+                + weatherData.weather[0].description.slice(1)}? </h1>
+            </div>
+            <div className='home-btn'>
+                    <Link to='/'>
+                        Return Home
+                    </Link>
             </div>
 
             <div className='middle'>

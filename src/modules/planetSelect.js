@@ -2,10 +2,10 @@ export default function selectPlanet(temp, cloud, description){
     console.log(temp)
     if(temp < 273){
         return 2
-    } else if(temp >= 273 && temp < 294){
+    } else if(temp >= 273 && temp < 295){
         return temperatePlanet(cloud, description)
     }
-    else if (temp >= 294 && temp < 320){
+    else if (temp >= 295 && temp < 320){
         return hotPlanet(cloud, description)
     } else {
         return 8
@@ -21,7 +21,7 @@ function temperatePlanet(cloud, description){
         return 3
     } 
     
-    if(description.includes("haze") || description.includes("mist")){
+    if(description.includes("haze") || description.includes("mist") || description.includes("fog")){
         return 7
     } else {
         return 6

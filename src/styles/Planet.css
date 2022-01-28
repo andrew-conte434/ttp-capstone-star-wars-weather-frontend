@@ -11,59 +11,94 @@
 	z-index: -1;
 	max-width: 100%;
 	min-height: 100%;
+	filter: blur(1px);
+	filter : saturate(1);
+	opacity: 85%;
 }
 
 .specific-planet-name {
 	font-family: 'Roboto', monospace;
-	font-size: 50px;
-	font-weight: 900;
+	font-size: 300%;
+	/* font-weight: 900; */
 }
 
 .top {
-	color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	/* color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 	font-family: 'Roboto Mono', monospace;
 	font-size: 90%;
 	position: absolute;
 	top: 4%;
 	left: 3%;
+	display: flex;
+}
+
+a:link { 
+	color: black;
+	text-decoration: none;
+ }
+
+
+a:visited {
+	color: black;
+	text-decoration: none;
+ }
+
+
+a:hover { 
+	color : white;
+	text-decoration: none; 
+}
+
+
+a:active { 
+	text-decoration: none; 
+}
+
+.home-btn {
+	font-size: 200%;
+	position: absolute;
+	top: 4%;
+	right: 3%;
+	text-decoration: none;
+	width: fit-content;
 }
 
 .middle {
-	color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	/* color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 	margin: 0 auto;
-	position: absolute;
+	position: fixed;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	font-family: 'Roboto Mono', monospace;
 	font-size: 140%;
 	top: 35%;
-	bottom: 30%;
+	/* bottom: 30%; */
 	left: 20%;
 	right: 20%;
 }
 
 .middle-top {
-	color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	/* color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 	margin-right: 20%;
 	left: 10%;
 	right: 20%;
 }
 
 .middle-bottom {
-	color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	/* color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 	margin-left: 20%;
 	left: 20%;
 	right: 20%;
 }
 
 .bottom {
-	color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	/* color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 	font-family: 'Roboto Mono', monospace;
 	font-size: 90%;
 	position: absolute;
