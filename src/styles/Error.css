@@ -1,31 +1,226 @@
-/* body {
-    background-image: url(alderaan.webp);
-    background-color: #000000;
-    background-repeat: no-repeat;
-    /* background-size: cover; */
-    /* height: 200px;
-   } */ 
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300";
+body {
+  background-color: #000000;
 
-/* .error-page {
-    background-color: black;
-} */
+  background: url("https://c.tenor.com/KGHNYLeVygwAAAAC/death-star-alderaan.gif")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.error-page {
+}
 
 .error-title {
-    font-family: 'Roboto Mono';
-    font-weight: 500;
-    color: red;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    padding-top: 50px;
+  font-family: "star_jedi_outlineregular";
+  color: gold;
+  font-weight: 500;
+  font-size: 250%;
+  text-align: center;
+  padding-top: 100px;
 }
 
 .error-button {
-    border: none;
+  margin-top: 1%;
+  outline: none;
+  background: #ffc300;
+  border: none;
+  border-radius: 20px;
+  font-size: larger;
+  font-weight: 700;
+  color: white;
+  box-shadow: 5px 2px #888888;
 }
 
-/* .error-img {
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-} */
+.error-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.685);
+  filter: opacity(90%);
+  filter: blur(0.2px);
+  filter: saturate(2);
+}
+@font-face {
+  font-family: "star_jedi_outlineregular";
+  src: url("/src/styles/starjout-webfont.woff2") format("woff2"),
+    url("/src/styles/starjout-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+div[class*="box"] {
+  height: 33.33%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-2 {
+  background-color: transparent;
+}
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+/* 
+  ========================
+        BUTTON ONE
+  ========================
+  */
+.btn-one {
+  color: #fff;
+  transition: all 0.3s;
+  position: relative;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.btn-one::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-one:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+/* 
+  ========================
+        BUTTON TWO
+  ========================
+  */
+.btn-two {
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-two span {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.btn-two::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-two::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255, 255, 255, 0);
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* 
+  ========================
+        BUTTON THREE
+  ========================
+  */
+.btn-three {
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-three::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+.btn-three:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+.btn-three::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: scale(1.2, 1.2);
+}
+.btn-three:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
