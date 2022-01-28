@@ -32,7 +32,7 @@ export default function HomePage() {
 					<input placeholder='ENTER CITY HERE...'
 						onChange={(e) => setCity(e.target.value)}></input>
 					<button className='enter-button' type='submit'>
-						ENTER CITY
+						SEARCH
 					</button>
 				</form>
 			</div>

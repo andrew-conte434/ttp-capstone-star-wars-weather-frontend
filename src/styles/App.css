@@ -62,7 +62,13 @@ body {
 	flex-direction: column;
 }
 
-.logo-div>input {
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logo-div > form > input {
 	margin-top: 0.7%;
 	outline: none;
 	background: transparent;
@@ -73,8 +79,18 @@ body {
 	text-align: center;
 }
 
+@keyframes enter-button {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
 .enter-button {
-	margin-top: 1%;
+	margin-top: 5%;
+	width: 50%;
 	outline: none;
 	background: #ffc300;
 	border: none;
@@ -82,11 +98,14 @@ body {
 	font-size: larger;
 	font-weight: 700;
 	color: white;
-	box-shadow: 5px 2px #888888;
+	transition: all 0.5s ease;
 }
 
-.logo-div>button:hover {
+.logo-div>form>button:hover {
 	background: #b18800;
+	animation: enter-button .2s alternate ease-in 2;
+
+
 }
 
 ::placeholder {
