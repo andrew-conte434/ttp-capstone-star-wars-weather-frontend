@@ -13,7 +13,7 @@
 	min-height: 100%;
 	filter: blur(1px);
 	filter : saturate(1);
-	opacity: 85%;
+	opacity: 80%;
 }
 
 .specific-planet-name {
@@ -23,8 +23,8 @@
 }
 
 .top {
-	/* color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	font-family: 'Roboto Mono', monospace;
 	font-size: 90%;
 	position: absolute;
@@ -33,25 +33,25 @@
 	display: flex;
 }
 
-a:link { 
+.return-home:link { 
 	color: black;
 	text-decoration: none;
  }
 
 
-a:visited {
+.return-home:visited {
 	color: black;
 	text-decoration: none;
  }
 
 
-a:hover { 
+.return-home:hover { 
 	color : white;
 	text-decoration: none; 
 }
 
 
-a:active { 
+.return-home:active { 
 	text-decoration: none; 
 }
 
@@ -65,8 +65,8 @@ a:active {
 }
 
 .middle {
-	/* color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	margin: 0 auto;
 	position: fixed;
 	display: flex;
@@ -81,24 +81,24 @@ a:active {
 }
 
 .middle-top {
-	/* color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	margin-right: 20%;
 	left: 10%;
 	right: 20%;
 }
 
 .middle-bottom {
-	/* color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	margin-left: 20%;
 	left: 20%;
 	right: 20%;
 }
 
 .bottom {
-	/* color: white;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	font-family: 'Roboto Mono', monospace;
 	font-size: 90%;
 	position: absolute;

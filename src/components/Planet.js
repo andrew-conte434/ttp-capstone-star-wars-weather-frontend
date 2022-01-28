@@ -24,7 +24,7 @@ export default function (props) {
     const fetchData = async() => {
         try {
             console.log(params.city)
-            const resWeather = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${params.city.toLowerCase()}&appid=${apiKey}`);
+            const resWeather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${params.city.toLowerCase()}&appid=${apiKey}`);
             const resPlanets = await fetch(`https://star-wars-weather-database.herokuapp.com/api/planets/`)
             //const obj = await res.json()
             //setPlanets(obj)
@@ -49,8 +49,8 @@ export default function (props) {
 
     (weatherData && (id = (selectPlanet(weatherData.main.temp, weatherData.clouds.all,
         weatherData.weather[0].description)  - 1)))
-
-    if(error){
+    console.log(error)
+    if(error === true){
         navigate('/error')
     }
     return (
@@ -67,7 +67,7 @@ export default function (props) {
                 + weatherData.weather[0].description.slice(1)}? </h1>
             </div>
             <div className='home-btn'>
-                    <Link to='/'>
+                    <Link to='/' className="return-home">
                         Return Home
                     </Link>
             </div>
