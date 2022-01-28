@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.37d40dc6.css",
+    "main.js": "/static/js/main.ebba266b.js",
+    "static/js/787.38b23e04.chunk.js": "/static/js/787.38b23e04.chunk.js",
+    "static/media/star-wars-video.mp4": "/static/media/star-wars-video.a885a76a9258237a5a30.mp4",
+    "static/media/star-wars-music.mp3": "/static/media/star-wars-music.24adcf4395faee96bd00.mp3",
+    "static/media/hoth.jpeg": "/static/media/hoth.055d4b627474ae950890.jpeg",
+    "static/media/Starjedi.ttf": "/static/media/Starjedi.8d577dc1e1755c4860f3.ttf",
+    "static/media/starjout-webfont.woff": "/static/media/starjout-webfont.6207a5eee1487bbba0b6.woff",
+    "static/media/starjout-webfont.woff2": "/static/media/starjout-webfont.4188b7eddc7dd7052fe3.woff2",
+    "static/media/star-wars-logo.wine.svg": "/static/media/star-wars-logo.wine.99876efd2e5f0cf9d7a45080e4163afd.svg",
+    "index.html": "/index.html",
+    "main.37d40dc6.css.map": "/static/css/main.37d40dc6.css.map",
+    "main.ebba266b.js.map": "/static/js/main.ebba266b.js.map",
+    "787.38b23e04.chunk.js.map": "/static/js/787.38b23e04.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37d40dc6.css",
+    "static/js/main.ebba266b.js"
+  ]
+}

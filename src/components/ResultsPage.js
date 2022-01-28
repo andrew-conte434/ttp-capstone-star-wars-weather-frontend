@@ -19,7 +19,7 @@ export default function ResultsPage(props) {
 
   const fetchData = async () => {
     try {
-      const res = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${props.city.toLowerCase()}&appid=${apiKey}`);
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${props.city.toLowerCase()}&appid=${apiKey}`);
       if (!res.ok) {
         setError(true)
       } else {
