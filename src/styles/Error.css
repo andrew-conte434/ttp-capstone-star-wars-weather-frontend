@@ -1,22 +1,18 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300";
-body {
-  
-}
 
 .error-page {
   background-color: #000000;
 
-  background: url("https://c.tenor.com/KGHNYLeVygwAAAAC/death-star-alderaan.gif")
-    no-repeat center center fixed;
+  background: url("https://c.tenor.com/KGHNYLeVygwAAAAC/death-star-alderaan.gif") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: absolute;
-  top : 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
 }
 
 .error-title {
@@ -26,18 +22,6 @@ body {
   font-size: 250%;
   text-align: center;
   padding-top: 100px;
-}
-
-.error-button {
-  margin-top: 1%;
-  outline: none;
-  background: #ffc300;
-  border: none;
-  border-radius: 20px;
-  font-size: larger;
-  font-weight: 700;
-  color: white;
-  box-shadow: 5px 2px #888888;
 }
 
 .error-img {
@@ -56,6 +40,7 @@ body {
   filter: blur(0.2px);
   filter: saturate(2);
 }
+
 @font-face {
   font-family: "star_jedi_outlineregular";
   src: url("/src/styles/starjout-webfont.woff2") format("woff2"),
@@ -81,6 +66,7 @@ div[class*="box"] {
   height: 50px;
   text-align: center;
   width: 250px;
+  border: 2px solid goldenrod;
 }
 
 /* 
@@ -93,10 +79,12 @@ div[class*="box"] {
   transition: all 0.5s;
   position: relative;
 }
+
 .btn-link {
   color: gold;
   cursor: crosshair;
 }
+
 .btn-one span {
   font-family: "star_jedi_outlineregular";
   z-index: 2;
@@ -105,6 +93,7 @@ div[class*="box"] {
   width: 100%;
   height: 100%;
 }
+
 .btn-one::before {
   content: "";
   position: absolute;
@@ -114,10 +103,16 @@ div[class*="box"] {
   height: 100%;
   z-index: 1;
   transition: all 0.5s;
-  border: 2px solid goldenrod;
+
+  /* border: 2px solid goldenrod; */
+
+  border-top: 2px solid goldenrod;
+  border-right: 2px solid goldenrod;
+  border-bottom: 2px solid goldenrod;
 
   background-color: transparent;
 }
+
 .btn-one::after {
   content: "";
   position: absolute;
@@ -127,13 +122,20 @@ div[class*="box"] {
   height: 100%;
   z-index: 1;
   transition: all 0.5s;
-  border: 2px solid goldenrod;
+
+  /* border: 2px solid goldenrod; */
+
+  border-top: 2px solid goldenrod;
+  border-bottom: 2px solid goldenrod;
+
   background-color: rgba(255, 255, 255, 0);
 }
+
 .btn-one:hover::before {
   transform: rotate(-45deg);
   background-color: rgba(255, 255, 255, 0);
 }
+
 .btn-one:hover::after {
   transform: rotate(45deg);
   background-color: rgba(255, 255, 255, 0);
