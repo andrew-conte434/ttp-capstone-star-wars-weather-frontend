@@ -2,12 +2,6 @@
 	margin: 0;
 }
 
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .star-wars-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
 #video {
 	background-position: center;
   background-repeat: no-repeat;

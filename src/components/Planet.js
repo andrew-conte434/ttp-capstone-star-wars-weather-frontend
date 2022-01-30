@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/Planet.css'
-import { Context } from './Context'
-import { useParams,useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import selectPlanet from '../modules/planetSelect';
 
-export default function (props) {
+export default function Planet(props) {
     let params = useParams()
     let navigate = useNavigate()
 
@@ -14,23 +13,26 @@ export default function (props) {
     const [weatherData, setWeatherData] = useState(null)
     const [error, setError] = useState(false)
 
-    const apiKey = '2633a1483698ea57695b55437e395ee8' //SHAKHRAM
 
     useEffect(() => {
         fetchData()
     }, [])
 
+    const goToHome = () => {
+        navigate('/')
+    }
 
-    const fetchData = async() => {
+    const goToList = () => {
+        navigate('/list')
+    }
+
+    const fetchData = async () => {
+        const apiKey = process.env.REACT_APP_WEATHER_API_KEY
         try {
             console.log(params.city)
             const resWeather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${params.city.toLowerCase()}&appid=${apiKey}`);
             const resPlanets = await fetch(`https://star-wars-weather-database.herokuapp.com/api/planets/`)
-            //const obj = await res.json()
-            //setPlanets(obj)
-            console.log(resWeather)
             if (!resWeather.ok || !resPlanets.ok) {
-                console.log(!resWeather.ok)
                 setError(true)
             } else {
                 setError(false)
@@ -38,9 +40,6 @@ export default function (props) {
                 const objPlanets = await resPlanets.json()
                 await setWeatherData(objWeather)
                 await setPlanets(objPlanets)
-                console.log(objWeather)
-                console.log(weatherData)
-                
             }
         } catch (error) {
             console.log(error)
@@ -48,13 +47,14 @@ export default function (props) {
     }
 
     (weatherData && (id = (selectPlanet(weatherData.main.temp, weatherData.clouds.all,
-        weatherData.weather[0].description)  - 1)))
-    console.log(error)
-    if(error === true){
+        weatherData.weather[0].description) - 1)))
+
+    if (error === true) {
         navigate('/error')
     }
+
     return (
-        (planets) && 
+        (planets) &&
         <div className='planet-div'>
 
             <div>
@@ -62,15 +62,26 @@ export default function (props) {
             </div>
 
             <div className='top'>
-                <h1>{Math.floor(((weatherData.main.temp - 273.15)* 1.8) + 32)} degrees? {weatherData.
-                weather[0].description.charAt(0).toUpperCase() 
-                + weatherData.weather[0].description.slice(1)}? </h1>
+                <h1>{Math.floor(((weatherData.main.temp - 273.15) * 1.8) + 32)} degrees? {weatherData.
+                    weather[0].description.charAt(0).toUpperCase()
+                    + weatherData.weather[0].description.slice(1)}? </h1>
             </div>
-            <div className='home-btn'>
-                    <Link to='/' className="return-home">
-                        Return Home
-                    </Link>
-            </div>
+
+            {/* <div >
+                <Link to='/' className='button' id='home-btn'>
+                    RETURN HOME
+                </Link>
+            </div> */}
+
+            {/* <div >
+                <Link to='/list' className='button' id='list-btn'>
+                    MY LIST
+                </Link>
+            </div> */}
+
+            <button className='button' id='home-btn' onClick={goToHome}>RETURN HOME</button>
+
+            <button className='button' id='list-btn' onClick={goToList}>MY LIST</button>
 
             <div className='middle'>
                 <h1 className='middle-top'>It's like</h1>
@@ -84,4 +95,4 @@ export default function (props) {
 
         </div>
     )
-}  
+}
