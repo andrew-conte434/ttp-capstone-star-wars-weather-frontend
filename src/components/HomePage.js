@@ -28,7 +28,7 @@ export default function HomePage() {
 			{/* <audio src={audio} autoPlay></audio> */}
 
 			<div>
-				<button className='my-list-btn' onClick={goToList}>MY LIST</button>
+				<button className='button' id='my-list-btn' onClick={goToList}>MY LIST</button>
 			</div>
 
 			<div className='logo-div'>

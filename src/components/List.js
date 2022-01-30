@@ -62,8 +62,15 @@ export default function List() {
 
     return (
         <div className="List">
+
             <div>
-                <button className='my-list-btn' onClick={goToHome}>HOME</button>
+                <img id="background-img" src='https://wallpaper.dog/large/10878177.jpg' />
+            </div>
+
+            <h1 className="list-title">My Cities</h1>
+
+            <div>
+                <button className="button" id='home-btn' onClick={goToHome}>HOME</button>
             </div>
 
             <form onSubmit={add} className='list-form'>
@@ -71,7 +78,7 @@ export default function List() {
                     {/* <label className="list-label"></label> */}
                     <input placeholder="ENTER CITY NAME" id='city' value={item} onChange={(e) => setItem(e.target.value)} />
                 </fieldset>
-                <button className="button" type="submit">add</button>
+                <button className="button" id='add-btn' type="submit">add</button>
             </form>
 
             {items.map((item, index, i, j , k) => {
@@ -84,7 +91,7 @@ export default function List() {
 
 
                         <p id={`displayedCity-${item.id}`} key={i}>{item.item}</p>
-                        <button className="button" onClick={() => goToCity(item.id)} key={j}>navigate</button>
+                        <button className="button" id='navigate' onClick={() => goToCity(item.id)} key={j}>navigate</button>
 
 
                         <button className="button" id='remove' onClick={() => remove(index)} key={k}>remove</button>

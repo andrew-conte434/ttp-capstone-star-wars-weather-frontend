@@ -19,6 +19,13 @@ export default function Planet(props) {
         fetchData()
     }, [])
 
+    const goToHome = () => {
+        navigate('/')
+    }
+
+    const goToList = () => {
+        navigate('/list')
+    }
 
     const fetchData = async () => {
         try {
@@ -59,17 +66,22 @@ export default function Planet(props) {
                     weather[0].description.charAt(0).toUpperCase()
                     + weatherData.weather[0].description.slice(1)}? </h1>
             </div>
-            <div className='home-btn'>
-                <Link to='/' className="return-home">
+
+            {/* <div >
+                <Link to='/' className='button' id='home-btn'>
                     RETURN HOME
                 </Link>
-            </div>
+            </div> */}
 
-            <div className='fave-btn'>
-                <Link to='/list' className="add-fave">
+            {/* <div >
+                <Link to='/list' className='button' id='list-btn'>
                     MY LIST
                 </Link>
-            </div>
+            </div> */}
+
+            <button className='button' id='home-btn' onClick={goToHome}>RETURN HOME</button>
+
+            <button className='button' id='list-btn' onClick={goToList}>MY LIST</button>
 
             <div className='middle'>
                 <h1 className='middle-top'>It's like</h1>
@@ -83,4 +95,4 @@ export default function Planet(props) {
 
         </div>
     )
-}  
+}

@@ -1,5 +1,24 @@
+#background-img {
+    background: url('https://wallpaper.dog/large/10878177.jpg');
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	position: absolute;
+	z-index: -1;
+	object-fit: cover;
+	height: 100%;
+    width: 100%;
+    justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.685);
+	/* filter: opacity(95%); */
+}
 
 .button {
+    margin-left: 20px;
     color: black;
     background: #fff;
     backface-visibility: hidden;
@@ -60,7 +79,13 @@
     transform: translateY(.125rem);
 }
 
-
+.list-title {
+    top: 7%;
+    color: #ffc300;
+    font-size: 300%;
+    font-family: 'Starjedi';
+    text-align: center;
+}
 
 form.list-form {
     margin-top: 10px;
@@ -71,13 +96,20 @@ form.list-form {
 
 fieldset {
     border-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-input{
-    padding: 8px;
+input#city {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
 }
 
-p#displayedCity {
+p {
     font-size: 100%;
     font-weight: 700;
     margin-left: 20px;
@@ -96,6 +128,20 @@ button#remove.button {
     padding-bottom: 30px;
 }
 
-button.my-list-btn {
-    color: black;
+#home-btn {
+    position: absolute;
+    top: 4%;
+	right: 3%;
+    font-size: 90%;
+}
+
+button#home-btn:hover {
+	color: rgb(219, 83, 83);
+	text-decoration: none;
+	cursor: pointer;
+	background: white;
+}
+
+#add-btn {
+    margin: 0;
 }
