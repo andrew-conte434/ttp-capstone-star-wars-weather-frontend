@@ -13,7 +13,6 @@ export default function Planet(props) {
     const [weatherData, setWeatherData] = useState(null)
     const [error, setError] = useState(false)
 
-    const apiKey = '2633a1483698ea57695b55437e395ee8' //SHAKHRAM
 
     useEffect(() => {
         fetchData()
@@ -28,6 +27,7 @@ export default function Planet(props) {
     }
 
     const fetchData = async () => {
+        const apiKey = process.env.REACT_APP_WEATHER_API_KEY
         try {
             console.log(params.city)
             const resWeather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${params.city.toLowerCase()}&appid=${apiKey}`);
