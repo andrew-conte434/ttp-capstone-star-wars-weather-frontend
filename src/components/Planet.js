@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../styles/Planet.css'
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import selectPlanet from '../modules/planetSelect';
+import Loading from './Loading';
 
 export default function Planet(props) {
     let params = useParams()
