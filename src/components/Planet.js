@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../styles/Planet.css'
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import selectPlanet from '../modules/planetSelect';
-import Loading from './Loading'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import * as ReactBootStrap from 'react-bootstrap' 
+import Loading from './Loading';
 
 export default function Planet(props) {
     let params = useParams()
@@ -43,9 +41,12 @@ export default function Planet(props) {
                 setError(false)
                 const objWeather = await resWeather.json()
                 const objPlanets = await resPlanets.json()
-                await setWeatherData(objWeather)
-                await setPlanets(objPlanets)
-                setLoading(false)
+                setWeatherData(objWeather)
+                setPlanets(objPlanets)
+
+                setTimeout(function(){
+                    setLoading(false)
+                }, 2000)
             }
         } catch (error) {
             console.log(error)
@@ -86,7 +87,7 @@ export default function Planet(props) {
             </div>
 
             <div className='bottom'>
-                <h1>{planets[id].quote}</h1>
+                <h2>{planets[id].quote}</h2>
             </div>
             
         </div> }
