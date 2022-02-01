@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import '../styles/Planet.css'
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import selectPlanet from '../modules/planetSelect';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import * as ReactBootStrap from 'react-bootstrap' 
 
 export default function Planet(props) {
     let params = useParams()
@@ -12,6 +14,7 @@ export default function Planet(props) {
 
     const [weatherData, setWeatherData] = useState(null)
     const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(false)
 
 
     useEffect(() => {
@@ -31,6 +34,7 @@ export default function Planet(props) {
         try {
             console.log(params.city)
             const resWeather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${params.city.toLowerCase()}&appid=${apiKey}`);
+            setLoading(true)
             const resPlanets = await fetch(`https://star-wars-weather-database.herokuapp.com/api/planets/`)
             if (!resWeather.ok || !resPlanets.ok) {
                 setError(true)
@@ -40,6 +44,7 @@ export default function Planet(props) {
                 const objPlanets = await resPlanets.json()
                 await setWeatherData(objWeather)
                 await setPlanets(objPlanets)
+                setLoading(false)
             }
         } catch (error) {
             console.log(error)
@@ -54,9 +59,11 @@ export default function Planet(props) {
     }
 
     return (
-        (planets) &&
+        <>
+        {loading ? <ReactBootStrap.Spinner animation="border"/> : 
+        planets &&
         <div className='planet-div'>
-
+            
             <div>
                 <img className='planet-image' src={planets[id].imageUrl} alt='planet' />
             </div>
@@ -66,18 +73,6 @@ export default function Planet(props) {
                     weather[0].description.charAt(0).toUpperCase()
                     + weatherData.weather[0].description.slice(1)}? </h1>
             </div>
-
-            {/* <div >
-                <Link to='/' className='button' id='home-btn'>
-                    RETURN HOME
-                </Link>
-            </div> */}
-
-            {/* <div >
-                <Link to='/list' className='button' id='list-btn'>
-                    MY LIST
-                </Link>
-            </div> */}
 
             <button className='button' id='home-btn' onClick={goToHome}>RETURN HOME</button>
 
@@ -92,7 +87,8 @@ export default function Planet(props) {
             <div className='bottom'>
                 <h1>{planets[id].quote}</h1>
             </div>
-
-        </div>
+            
+        </div> }
+    </>
     )
 }
