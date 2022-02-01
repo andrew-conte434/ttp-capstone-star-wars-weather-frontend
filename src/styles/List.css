@@ -1,24 +1,24 @@
 #background-img {
     background: url('https://wallpaper.dog/large/10878177.jpg');
     background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-	position: absolute;
-	z-index: -1;
-	object-fit: cover;
-	height: 100%;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    height: 100%;
     width: 100%;
     justify-content: center;
-	align-items: center;
-	background: rgba(255, 255, 255, 0.685);
-	/* filter: opacity(95%); */
+    align-items: center;
+    background: rgba(255, 255, 255, 0.685);
+    /* filter: opacity(95%); */
 }
 
 .button {
-    margin-left: 20px;
+    /* margin-left: 20px; */
     color: black;
     background: #fff;
     backface-visibility: hidden;
@@ -46,11 +46,11 @@
 }
 
 .button:not(:disabled):hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .button:not(:disabled):hover:active {
-    transform: scale(1.05) translateY(.125rem);
+    transform: scale(1.03) translateY(.125rem);
 }
 
 .button:focus {
@@ -88,7 +88,6 @@
 }
 
 form.list-form {
-    margin-top: 10px;
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -112,34 +111,59 @@ input#city {
 p {
     font-size: 100%;
     font-weight: 700;
-    margin-left: 20px;
-    padding-bottom: 10px;
+    color: #ffc300;
+    text-align: center;
+    display: flex;
+    justify-content: left;
 }
 
 button#navigate.button {
-    margin-left: 20px;
+    margin-left: 0;
 }
 
 button#remove.button {
     margin-left: 20px;
 }
 
-.buttons-div {
-    padding-bottom: 30px;
+.city-div {
+    min-width: 25%;
+    margin: 20px auto;
+    padding: 30px 20px;
+    width: fit-content;
+    justify-content: space-between;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 3px solid gray;
+    border-radius: 20px;
+    background-color: #21212180;
+}
+
+.city-div:hover {
+    border: 3px solid red;
+    transition: all 0.5s ease;
+    background-color: #212121d7;
+}
+
+
+.city-buttons {
+    display: flex;
+    justify-content: right;
 }
 
 #home-btn {
     position: absolute;
     top: 4%;
-	right: 3%;
+    right: 3%;
     font-size: 90%;
 }
 
 button#home-btn:hover {
-	color: rgb(219, 83, 83);
-	text-decoration: none;
-	cursor: pointer;
-	background: white;
+    color: rgb(219, 83, 83);
+    text-decoration: none;
+    cursor: pointer;
+    background: white;
 }
 
 #add-btn {

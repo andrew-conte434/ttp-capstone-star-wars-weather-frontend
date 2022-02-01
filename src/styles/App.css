@@ -7,6 +7,7 @@
 body {
 	/* transform: scale(1.1); */
 	transform-origin: 0 0;
+	cursor: url('../images/light3.png'), pointer;
 }
 
 
