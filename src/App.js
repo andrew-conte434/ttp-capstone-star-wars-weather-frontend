@@ -6,6 +6,8 @@ import Error from './components/Error';
 import Planet from './components/Planet';
 import List from './components/List';
 
+const imageUrls = require('./modules/imageUrlArray')
+
 function App() {
 
   return (

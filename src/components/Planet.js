@@ -31,7 +31,6 @@ export default function Planet(props) {
     const fetchData = async () => {
         const apiKey = process.env.REACT_APP_WEATHER_API_KEY
         try {
-            console.log(params.city)
             const resWeather = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${params.city.toLowerCase()}&appid=${apiKey}`);
             setLoading(true)
             const resPlanets = await fetch(`https://star-wars-weather-database.herokuapp.com/api/planets/`)
