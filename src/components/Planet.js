@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../styles/Planet.css'
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import selectPlanet from '../modules/planetSelect';
+import Loading from './Loading'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import * as ReactBootStrap from 'react-bootstrap' 
 
@@ -60,7 +61,7 @@ export default function Planet(props) {
 
     return (
         <>
-        {loading ? <ReactBootStrap.Spinner animation="border"/> : 
+        {loading ? <Loading/> : 
         planets &&
         <div className='planet-div'>
             
